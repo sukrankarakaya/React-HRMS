@@ -1,11 +1,12 @@
 .flooter{
     background-color: black;
-    height:15em;
+    height:250px;
 }
 
 .help{
     float: left;
-    width: 250px;
+    height: 200px;
+    width: 100%;
     
 
 }
@@ -21,12 +22,25 @@ h1
 
 .floot1{
     float: left;
+    width: 500px;
 
 }
 .floot2{
     float: left;
+    width: 900px;
 
 }
+
 .floot3{
-    float: left;
+    float: right;
+    width: 400px;
+}
+
+p:hover{
+
+    cursor: pointer;
+    color: rgb(67, 170, 230);
+
+    
+
 }

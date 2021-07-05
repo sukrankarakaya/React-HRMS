@@ -38,9 +38,10 @@ body {
 
     cursor: pointer;
     background-color: rgb(71, 66, 66);
-
+    color: rgb(67, 170, 230);
 
 }
+
 .row #icon{
     flex: 100%;
     display: grid;

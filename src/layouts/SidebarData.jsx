@@ -25,9 +25,6 @@ export const SidebarData=[
         icon:  <Icon name='user circle' />,
         link:"/home"
     },
-    
-
-  
     {
         title:"Yardım",
         icon:  <Icon name='question circle' />,

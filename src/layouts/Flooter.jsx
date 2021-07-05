@@ -55,16 +55,19 @@ export default function Flooter() {
                 </div>
                 <div className="floot3">
                     <List>
-                        <List.Item><p> YASAL</p></List.Item>
-                        <List.Item><p>Kullanım Koşulları</p></List.Item>
-                        <List.Item><p>Gizlilik Sözleşmesi</p></List.Item>
-                        <List.Item><p>Üyelik Sözleşmesi</p></List.Item>
-                        <List.Item><p>Çerezlerin Kullanımı</p></List.Item>
-                        <List.Item><p>Kalite Politikası</p></List.Item>
-                        <List.Item><p>KVKK Metni</p></List.Item>
+
+                        <List.Item><p>  ONLİNE İŞ İLETİŞİM BİLGİLERİ</p></List.Item>
+                        <List.Item><p><Icon name='map marker alternate' />Atatürk Caddesi, No: 82 Yenişehir Antalya TC.</p></List.Item>
+                        <List.Item><p><Icon name='envelope' /> isbul_bilgi@csgb.gov.ct.tr</p></List.Item>
+                        <List.Item><p><Icon name='phone volume' />+90 (392) 228 85 58-57</p></List.Item>
+                        <List.Item><p><Icon name='text telephone' /> +90 (392) 228 60-52</p></List.Item>
+
                     </List>
 
+
                 </div>
+
+
             </div>
 
 
