@@ -6,14 +6,28 @@
 .help{
     float: left;
     width: 250px;
+    
 
 }
 
 p{
-    color: beige
+    color: rgb(247, 247, 247)
 }
 h1
 {
     float: left;
 }
 
+
+
+.floot1{
+    float: left;
+
+}
+.floot2{
+    float: left;
+
+}
+.floot3{
+    float: left;
+}
