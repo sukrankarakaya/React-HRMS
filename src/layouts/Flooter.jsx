@@ -8,6 +8,7 @@ import { Image, List, Segment } from 'semantic-ui-react'
 export default function Flooter() {
     return (
         <div className="flooter">
+        <br />
 
             <Container>
                 <div className="button">
@@ -22,6 +23,7 @@ export default function Flooter() {
 
 
             </Container>
+            <br /><br />
 
 
             <div className="help">

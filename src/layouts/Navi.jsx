@@ -1,42 +1,71 @@
 import React from 'react'
-import { Container, Button, Menu, Input,Segment } from 'semantic-ui-react'
+import { useState, } from 'react'
+import { NavLink } from 'react-router-dom'
+import { Container, Button, Menu, Input, Segment ,Icon} from 'semantic-ui-react'
 import navi from '../css/navi.css'
+import SigneIn from './SigneIn'
+import SigneOut from './SigneOut'
+
 
 export default function Navi() {
+    const [isAuthenticated, setIsAuthenticated] = useState(true)
+
+    function handleSignOut(params) {
+        setIsAuthenticated(false)
+    }
+
+    function handleSignIn(params) {
+        setIsAuthenticated(true)
+    }
 
     return (
 
         <div className="navbar" >
-            <Segment inverted >
-            <Menu inverted  secondary >
+            <Segment inverted  >
+                <Menu inverted fixed="top">
 
-                <Container>
+                    <Container fixed="top">
 
-                    <Menu.Item 
-                        name='HRMS'
+                        <Menu.Item
+                            name='HRMS'
+                            as={NavLink} to="/"
+                           
+                            
 
-                    />
-                    <br></br><br></br>
-                    <Input className='icon' icon='search' placeholder='İş Ara...' />
+                        />
 
 
-                    <Menu.Menu position='right'>
+                        <Menu.Item >
+                            <Input size="mini" placeholder='İş Bul...' icon="search" />
+                        </Menu.Item>
 
-                        <Button basic inverted color='blue'>
-                        Kayıt Ol
-                        </Button>
-                      
-                        <Button basic inverted color='blue'>
-                        Giriş Yap
-                        </Button>
+
+
+                        <Menu.Item  >
+                            <Button basic inverted color='blue'>
+                                Cv Oluştur
+                            </Button>
+
+                        </Menu.Item>
                         
+                        <Menu.Item as={NavLink} to="/JobAdvertisament/add" >
+                            <Button basic inverted color='blue' >
+                            İş İlanı Ekle
+                            </Button>
+
+                        </Menu.Item>
+
+                        <Menu.Item position="right">
+
+                            {isAuthenticated ? <SigneIn signOut={handleSignOut} /> : <SigneOut singIn={handleSignIn} />}
+
+                        </Menu.Item>
 
 
-                      
-                    </Menu.Menu>
-                </Container>
+                    </Container>
 
-            </Menu>
+
+                </Menu>
             </Segment>
 
 

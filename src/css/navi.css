@@ -1,6 +1,12 @@
 .navbar{
     
-    width: 2000px;
-    height: 60px;
-    background-color: #0a0303;
+    width: 100%;
+    height: 50px;
+    
+    background-color: #1b1c1d;
+    
+}
+.cv{
+    height: 1px;
+
 }

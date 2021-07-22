@@ -1,11 +1,12 @@
 .flooter{
-    background-color: black;
-    height:250px;
+    background-color: #1b1c1d;
+    height:300px;
+    
 }
 
 .help{
     float: left;
-    height: 200px;
+    height: 300px;
     width: 100%;
     
 
@@ -27,7 +28,7 @@ h1
 }
 .floot2{
     float: left;
-    width: 900px;
+    width: 400px;
 
 }
 

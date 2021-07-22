@@ -11,7 +11,8 @@ body {
 .Sidebar{
     height: 100%;
     width: 250px;
-    background-color: black;
+    background-color: #1b1c1d;
+    position: fixed;
 }
 
 .SidebarList{

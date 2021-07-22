@@ -6,10 +6,13 @@ import { Container } from 'semantic-ui-react';
 import Navi from 'layouts/Navi';
 import Flooter from 'layouts/Flooter';
 import Sidebar from 'layouts/Sidebar';
+//import { Sidebar ,Grid} from 'semantic-ui-react'
+
 
 function App() {
   return (
     <div className="App">
+
 
 
       <div className="navbar">
@@ -17,13 +20,11 @@ function App() {
 
 
       </div>
-      <div className="Sidebar">
-        <Sidebar />
 
 
-      </div>
+     
       <div className="Dashbord">
-        <Dashboard />
+      <Dashboard />
 
 
       </div>

@@ -9,18 +9,20 @@
 body {
   margin: 0;
   padding: 0;
+  
+}
+
+.Sidebar{
+
+  float: left;
+  height: 800px;
+
 }
 
 .Dashbord{
- 
-  float: right;
-  
+   float: right;
 }
-.Sidebar{
- 
-  float: left;
-}
-.flooter{
 
+.flooter{
   clear: both;
 }
