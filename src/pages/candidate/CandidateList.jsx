@@ -1,13 +1,13 @@
 import React,{useState, useEffect} from 'react'
 import {  Icon, Menu, Table } from 'semantic-ui-react'
-import CandidateService from 'services/candidateService'
+import CandidateService from 'services/candidate/candidateService'
 
 export default function CandidateList() {
 
     const [candidates, setCandidates] = useState([])
 
     useEffect(()=>{
-        let candidateService = new CandidateService
+        let candidateService = new CandidateService()
         candidateService.getCandidates().then(result => setCandidates(result.data.data))
 
     })

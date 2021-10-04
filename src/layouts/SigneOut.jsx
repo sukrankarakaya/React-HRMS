@@ -1,19 +1,20 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import {  Button, Menu } from 'semantic-ui-react'
 
 export default function SigneOut({singIn}) {
     return (
         <div>
-            <Menu.Menu position='right'>
+            <Menu.Menu position='right'style={{marginTop:"1em",marginBottom:"1em"}}>
         
 
-                <Button basic inverted color='blue'>
+                <Button basic circular inverted color='blue' as={NavLink} to="/candidateRegister">
                     Kayıt Ol
                 </Button>
 
-                <Button basic inverted color='blue' 
-                 onClick={singIn}
+                <Button basic circular inverted color='blue' 
+                  as={NavLink} to="/login"
                 >
                     Giriş Yap
                 </Button>

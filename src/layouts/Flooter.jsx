@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Icon, Container } from 'semantic-ui-react'
 import flooter from '../css/flooter.css'
-import { Image, List, Segment } from 'semantic-ui-react'
+import {  List } from 'semantic-ui-react'
 
 
 
@@ -55,7 +55,7 @@ export default function Flooter() {
                     </List>
 
                 </div>
-                <div className="floot3">
+                <div className="floot3" >
                     <List>
 
                         <List.Item><p>  ONLİNE İŞ İLETİŞİM BİLGİLERİ</p></List.Item>

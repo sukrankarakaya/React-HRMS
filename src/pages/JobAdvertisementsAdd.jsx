@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import { Formik, Field } from 'formik';
+
 import * as Yup from 'yup';
 import CitiesService from 'services/citiesService';
 import { Grid, Dropdown, Card, Form, Input, TextArea, Button } from "semantic-ui-react";
 
 import { useFormik } from 'formik';
-import JobAdvertisementsService from 'services/jobAdvertisaments/jobAdvertisamentsService';
-import { result, values } from 'lodash';
-import { event } from 'jquery';
-import JobPositionService from 'services/jobAdvertisaments/jobPositionService';
-import WayOfWorkingService from 'services/jobAdvertisaments/wayOfWorkingService';
-import WorkingTimeService from 'services/jobAdvertisaments/workingTime';
+import JobAdvertisementsService from 'services/jobAdvertisements/jobAdvertisementsService';
+import JobPositionService from 'services/jobAdvertisements/jobPositionService';
+import WayOfWorkingService from 'services/jobAdvertisements/wayOfWorkingService';
+import WorkingTimeService from 'services/jobAdvertisements/workingTime';
 import EmployerService from 'services/employerService';
-import { color } from '@material-ui/system';
-import moment from 'moment';
 
-export default function JobAdvertisamentsAdd() {
+import moment from 'moment';
+import { toast } from 'react-toastify';
+
+export default function JobAdvertisementsAdd() {
 
 
   const [cities, setCities] = useState([]);
@@ -39,15 +38,11 @@ export default function JobAdvertisamentsAdd() {
     let employerService = new EmployerService();
     employerService.getEmployers().then(result => setEmployer(result.data.data))
 
-
-  }, [])
-  useEffect(() => {
-    
-    
     let jobPositionService =new JobPositionService();
     jobPositionService.getJobPositions().then(result=> setJobPositions(result.data.data))
   
   }, [])
+
 
   const cityOption = cities.map((city, index) => ({
     key: index,
@@ -133,6 +128,7 @@ export default function JobAdvertisamentsAdd() {
 
       console.log(jobAdvertisament);
       jobAdvertisementsService.add(jobAdvertisament).then((result) => console.log(result.data.data));
+      toast.success("İlan Personel Onayına Gönderildi.")
 
     },
 
@@ -145,7 +141,10 @@ export default function JobAdvertisamentsAdd() {
 
       <Card fluid>
 
-        <Card.Header style={{backgroundColor:"black"}}><h1 style={{ backgroundColor: "black", color: "white", marginLeft: "10em", fontFamily: "Arial, Helvetica, sans-serif" }}> İş İlanı Ekle</h1></Card.Header>
+        <Card.Header style={{backgroundColor:"black"}} >
+          <h1 style={{ backgroundColor: "black",
+           color: "white", marginTop:"1em",
+            marginLeft: "17em",  fontFamily: "Arial, Helvetica, sans-serif" }}> İş İlanı Ekle</h1></Card.Header>
         <Card.Content>
 
           <Form onSubmit={formik.handleSubmit}>
@@ -333,6 +332,7 @@ export default function JobAdvertisamentsAdd() {
                   <p style={{ color: "red" }}>{formik.errors.deadLine}</p>
                 )}
               </div>
+              
               <div className="divStyle">
                 <label>Açıklama</label>
                 <TextArea id="jobDescription" placeholder="Açıklama..." style={{ marginRight: "1em", marginTop: "1em", minHeight: 100 }} onChange={formik.handleChange} value={formik.values.jobDescription}></TextArea>

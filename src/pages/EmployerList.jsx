@@ -1,67 +1,72 @@
-import React ,{useState, useEffect}from 'react'
-import { Icon, Menu, Table } from 'semantic-ui-react'
-import EmployerService from 'services/employer'
+import React, { useState, useEffect } from 'react'
+import { Segment, Table, Header } from 'semantic-ui-react'
+import EmployerService from 'services/employerService'
+import AddEmployerModal from './Employer/Modals/AddEmployerModal'
+import UpdateEmployerModal from './Employer/Modals/UpdateEmployerModal'
 
 
 
 export default function EmployerList() {
-   const [employers, setEmployers] = useState([])
+    const [employers, setEmployers] = useState([])
+    let employerService = new EmployerService()
 
+    useEffect(() => {
+        
+        employerService.getEmployers().then(result => setEmployers(result.data.data))
 
-   useEffect (()=>{
-       let employerService =new EmployerService()
-       employerService.getEmployers().then(result=>setEmployers(result.data.data))
-
-   })
+    })
 
     return (
         <div>
-            <Table celled>
-           
-           <Table.Header>
-               <Table.Row>
-                   <Table.HeaderCell>Şirket Adı</Table.HeaderCell>
-                   <Table.HeaderCell>E-mail</Table.HeaderCell>
-                   <Table.HeaderCell>Telefon Numarası</Table.HeaderCell>
-                   <Table.HeaderCell>Web Adresi</Table.HeaderCell>
-                   <Table.HeaderCell>Şifre</Table.HeaderCell>
-                  
-               </Table.Row>
-           </Table.Header>
-           <Table.Body>
-               {employers.map((employer) => (
-                   <Table.Row key={employer.id}>
-                       
-                       <Table.Cell>{employer.companyName}</Table.Cell>
-                       
-                       <Table.Cell>{employer.email}</Table.Cell>
-                       <Table.Cell>{employer.phoneNumber}</Table.Cell>
-                       <Table.Cell>{employer.webAdress}</Table.Cell>
-                       <Table.Cell>{employer.password}</Table.Cell>
-                       
-                   </Table.Row>
-               ))}
-           </Table.Body>
+            <Segment  style={{
+            marginTop: "5em",
+            marginBlockEnd: "30em",
 
-           <Table.Footer>
-               <Table.Row>
-                   <Table.HeaderCell colSpan="3">
-                       <Menu floated="right" pagination>
-                           <Menu.Item as="a" icon>
-                               <Icon name="chevron left" />
-                           </Menu.Item>
-                           <Menu.Item as="a">1</Menu.Item>
-                           <Menu.Item as="a">2</Menu.Item>
-                           <Menu.Item as="a">3</Menu.Item>
-                           <Menu.Item as="a">4</Menu.Item>
-                           <Menu.Item as="a" icon>
-                               <Icon name="chevron right" />
-                           </Menu.Item>
-                       </Menu>
-                   </Table.HeaderCell>
-               </Table.Row>
-           </Table.Footer>
-       </Table>
+        }}>
+
+                <Header size='huge'>İş Verenler</Header>
+
+                <Table celled style={{ margintop: "10em" }}>
+
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell>Şirket Adı</Table.HeaderCell>
+                            <Table.HeaderCell>E-mail</Table.HeaderCell>
+                            <Table.HeaderCell>Telefon Numarası</Table.HeaderCell>
+                            <Table.HeaderCell>Web Adresi</Table.HeaderCell>
+                            <Table.HeaderCell>
+                                <AddEmployerModal />
+
+                            </Table.HeaderCell>
+
+                        </Table.Row>
+                    </Table.Header>
+                    <Table.Body>
+                        {employers.map((employer) => (
+                            <Table.Row key={employer.id}>
+
+                                <Table.Cell>{employer.companyName}</Table.Cell>
+                                <Table.Cell>{employer.email}</Table.Cell>
+                                <Table.Cell>{employer.phoneNumber}</Table.Cell>
+                                <Table.Cell>{employer.webAdress}</Table.Cell>
+                                <Table.Cell>
+                                    <UpdateEmployerModal
+                                        id={employer.id}
+                                        companyName={employer.companyName}
+                                        webAdress={employer.webAdress}
+                                        email={employer.email}
+                                        phoneNumber={employer.phoneNumber}
+                                        isChackPassword={employer.isChackPassword}
+                                        password={employer.password} />
+                                </Table.Cell>
+
+                            </Table.Row>
+                        ))}
+                    </Table.Body>
+
+
+                </Table>
+            </Segment>
         </div>
     )
 }
