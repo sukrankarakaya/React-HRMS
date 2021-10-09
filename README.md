@@ -71,9 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### GÖRSELLER
 
-
-![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/giri%C5%9F.PNG)
-
 ![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/candidateRegister.PNG)
 
 ![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/giri%C5%9F.PNG)
