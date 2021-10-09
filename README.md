@@ -71,3 +71,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### GÖRSELLER
 ![xxx](https://github.com/sukoo184/React-HRMS/blob/master/src/logo.svg)
+
+
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/giri%C5%9F.PNG)
+
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/candidateRegister.PNG)
+
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/giri%C5%9F.PNG)
+
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/personel.PNG)
+
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/onay.PNG)
+
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/i%C5%9F%20veren%20list.PNG)
+
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/i%C5%9F%20veren%20men%C3%BC.PNG)
+
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/i%C5%9F%20ekle.PNG)
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/ilan%20detay%C4%B1.PNG)
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/cv1.PNG)
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/cv2.PNG)
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/cv3.PNG)
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/g%C3%BCncelleme.PNG)
+![xxx](https://github.com/sukoo184/React-HRMS/blob/master/images/favori.PNG)
