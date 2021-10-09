@@ -9,7 +9,7 @@ import SigneOut from './SigneOut'
 
 
 export default function Navi() {
-    const {authItems} = useSelector(state => state.auth)
+    const { authItems } = useSelector(state => state.auth)
 
     const [isAuthenticated, setIsAuthenticated] = useState(true)
 
@@ -42,20 +42,26 @@ export default function Navi() {
                     </Menu.Item>
 
 
+{/* 
 
-                    <Menu.Item as={NavLink} to="/employerList" disabled >
-                        <Button basic inverted color='blue'>
-                            Employer List
-                        </Button>
+                    {
+                        authItems[0].user.userType == 3 && <Menu.Item as={NavLink} to="/employerList" disabled >
+                            <Button basic inverted color='blue'>
+                                Employer List
+                            </Button>
 
-                    </Menu.Item>
+                        </Menu.Item>
+                    }
+                    {
+                        authItems[0].user.userType == 2 && <Menu.Item as={NavLink} to="/JobAdvertisementadd" disabled>
+                            <Button basic inverted color='blue' >
+                                İş İlanı Ekle
+                            </Button>
 
-                    <Menu.Item as={NavLink} to="/JobAdvertisementadd" disabled>
-                        <Button basic inverted color='blue' >
-                            İş İlanı Ekle
-                        </Button>
+                        </Menu.Item>
+                    } */}
 
-                    </Menu.Item>
+
 
                     <Menu.Menu position="right">
 

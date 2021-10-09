@@ -53,7 +53,6 @@ export default function Dashboard() {
                         <Route exact path="/JobAdvertisement" component={JobAdvertisementList} />
                         <Route exact path="/JobAdvertisement/:id" component={JobAdvertisementDetail} />
                         <Route exact path="/JobAdvertisementadd" component={JobAdvertisementsAdd} />
-                        <Route exact path="/JobAdvertisementadd" component={JobAdvertisementsAdd} />
 
                         <Route exact path="/JobAdvertisementFalse" component={JobAdvertisementFalseList} />
                         
@@ -67,6 +66,8 @@ export default function Dashboard() {
 
 
                         <Route exact path="/candidate" component={CandidateList} />
+                        
+                        <Route exact path="/candidateProfile/:id" component={CandidateProfile} />
                         <Route exact path="/JobAdvertisementDetailsForPersonnel/:id" component={JobAdvertisementDetailsForPersonnel} />
                         <Route exact path="/employerList" component={EmployerList} />
                         <Route exact path="/favorite/:id" component={JobAdvertisementFavorite} />
